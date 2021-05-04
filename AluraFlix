@@ -1,0 +1,152 @@
+HTML
+
+<html>
+
+<head>
+    <title>
+        Imersão Dev - Aula 05
+    </title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-title">
+            Marceloflix
+        </h1>
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo"
+            alt="">
+        <p class="page-subtitle">
+            Qual filme quer assitir hoje? 
+      </p>
+        <div class="form-wrapper">
+            <input type="text" id="filme" name="filme" placeholder="Insira o nome do filme">
+            <button onClick="adicionarFilme()">Buscar Filme</button>
+        </div>
+    </div>
+    <div id="listaFilmes"></div>
+    <a href="https://alura.com.br/" target="_blank">
+        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+    </a>
+</body>
+
+</html>
+
+CSS
+body {
+    font-family: 'Roboto Mono',monospace;
+    text-align:center;
+    background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-04-aluraflix-e-filmes.png');
+    background-color: #000000;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .page-title {
+    color: #ffffff;
+    margin: 0 0 5px;
+  }
+  
+  .page-subtitle {
+    color: #ffffff;
+    margin-top: 5px;
+  }
+  
+  .page-logo {
+    width: 200px;
+  }
+  
+  .alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right:10px;
+  }
+  
+  #listaFilmes img {
+    margin: 10px;
+  }
+  
+  .form-wrapper {
+    margin: 0 0 15px;
+  }
+  
+  .form-wrapper input {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 15px;
+  }
+  
+  .form-wrapper button {
+    border: 0;
+    color: #ffffff;
+    background: #DA1E26;
+    font-weight:bold;
+    padding: 15px 20px;
+    font-size: 16px;
+    borde-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .form-wrapper button:hover {
+    opacity:.8;
+  }
+  
+  JS
+  var filmes = []
+filmes.push("https://m.media-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_UX182_CR0,0,182,268_AL_.jpg")
+filmes.push("https://m.media-amazon.com/images/M/MV5BMTYzMDM4NzkxOV5BMl5BanBnXkFtZTgwNzM1Mzg2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg")
+filmes.push("https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg")
+filmes.push("https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_UX182_CR0,0,182,268_AL_.jpg")
+filmes.push("https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg")
+filmes.push("https://m.media-amazon.com/images/M/MV5BZDhlMzY0ZGItZTcyNS00ZTAxLWIyMmYtZGQ2ODg5OWZiYmJkXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_UX182_CR0,0,182,268_AL_.jpg")
+
+
+var urls = []
+urls.push("https://netcine.biz/star-wars-episodio-vii-o-despertar-da-forca/")
+urls.push("https://ultracine.biz/filme/toy-story-4")
+urls.push("https://ultracine.biz/filme/interestelar-online") 
+urls.push ("https://ultracine.biz/filme/batman-o-cavaleiro-das-trevas-ressurge")
+urls.push("https://ultracine.biz/filme/coringa")
+urls.push("https://ultracine.biz/serie/assistir-the-mandalorian-online-hd")
+
+for (var i = -1; i < filmes.length; i++)
+{
+document.write("<img src=" + filmes[i] + ">" + "<a href=" + urls[i + 1] + ">")
+}
+  
+function adicionarFilme() {
+var campoFilme = document.querySelector("#filme")
+var filmeEscolhido = campoFilme.value
+     if (filmeEscolhido.includes("Star Wars") + filmeEscolhido.includes ("Toy Story 4") + filmeEscolhido.includes ("Interstelar") + filmeEscolhido.includes ("Batman") + filmeEscolhido.includes ("Coringa") + filmeEscolhido.includes ("The Mandalorian")) { 
+   listarFilmeTela(filmeEscolhido)
+  }   else if (filmeEscolhido == "") {alert("Você não digitou nada, então não vai assitir nada também, Obrigado!")
+  }   
+  else {
+    alert ("Filme Indisponivel, ou, você que digitou errado, de qualquer forma a culpa é sua e não minha!")
+   }  
+  campoFilme.value = ""
+}
+  
+   function listarFilmeTela(escolha) {
+  if (escolha == "Star Wars") {document.write("<img src=" + filmes[0] + ">" + document.write("<a href=" + "https://netcine.biz/star-wars-episodio-vii-o-despertar-da-forca/" + ">"))
+  } 
+  if (escolha == "Toy Story 4") {document.write("<img src=" + filmes[1] + ">" + document.write("<a href=" + "https://ultracine.biz/filme/toy-story-4" + ">")); 
+    }      
+  if (escolha == "Interstelar") {document.write("<img src=" + filmes[2] + ">" + document.write("<a href=" + "https://ultracine.biz/filme/interestelar-online" + ">"))
+   }   
+  if (escolha == "Batman") {document.write("<img src=" + filmes[3] + ">" + document.write("<a href=" + "https://ultracine.biz/filme/batman-o-cavaleiro-das-trevas-ressurge" + ">"))
+   } 
+  if (escolha == "Coringa") {document.write("<img src=" + filmes[4] + ">" + document.write("<a href=" + "https://ultracine.biz/filme/coringa" + ">")) 
+  } 
+  if (escolha == "The Mandalorian") {document.write("<img src=" + filmes[5] + ">" + document.write("<a href=" + "https://ultracine.biz/serie/assistir-the-mandalorian-online-hd" + ">"))
+   }  
+}
+
