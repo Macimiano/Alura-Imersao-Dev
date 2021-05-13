@@ -1,0 +1,77 @@
+HTML
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+<section>
+  <header> <img src="https://dm2301files.storage.live.com/y4m-aSzztn4tR7pIf2uHvCGul1uCvboa3f5FTqp0oEInLqfRScSdvp1KbQZXUW3WWiFxLkqHvzk2i5xoIpZxCC-5rOyrTHolw2OaDrQ7QzCtBLSJEdK0pKtzCd_rVp8YyhAVv1kA8sJbW8jqG0B4RncXOqQPxLzTZU6Od3jsGIH6L4vck3N9pwxZvPlwVoLni0H?width=244&height=256&cropmode=none" width="244" height="256" />
+  </header>
+  
+<h1> Marcelo Rodrigues (@marcelomacimiano) </h1>
+<div>
+  <h2> Insignias da Imersao.dev </h2>
+  <ol> 
+    <li> <a href=https://codepen.io/marcelo-rodrigues-the-bold/pen/BapNobE>💰 Conversor de Moedas</a> </li> 
+    <li><a href=https://codepen.io/marcelo-rodrigues-the-bold/pen/dyNYRjW>🔣 Calculadora</a> </li>
+    <li><a href=https://codepen.io/marcelo-rodrigues-the-bold/pen/WNRrqrZ>🔮 Mentalista</a></li>
+    <li><a href=https://codepen.io/marcelo-rodrigues-the-bold/pen/NWdrOeq>🎬 Alura Flix</a></li>
+    <li><a href=hhttps://codepen.io/marcelo-rodrigues-the-bold/pen/XWppqdE>🏆 Tabela de Classificação</a></li>
+    <li><a href=https://codepen.io/marcelo-rodrigues-the-bold/pen/MWJvRQa>🃏 Super Trunfo</a></li>
+    <li><a href=https://codepen.io/marcelo-rodrigues-the-bold/pen/YzNYLNq>🌐 Certificard</a> </li>
+  </ol>
+
+</div>
+  </section>
+  
+  CSS
+  
+  
+body {
+  background-image: linear-gradient(to top,#182131 84%,#09286b 196%);
+  font-family: 'Roboto Condensed', sans-serif;
+   
+}
+section {
+  -webkit-box-shadow: 2px 14px 21px 3px rgba(0,0,0,0.74); 
+box-shadow: 2px 14px 21px 3px rgba(0,0,0,0.74);
+ background-image: url('https://lh3.googleusercontent.com/proxy/VVJtN8hxwYxf3gMHfXxy5IUfTBccUhm7KCLvaPzw25kCzfYGwTuZX4vzPyxogJ0WM33z3wchf0gkOQILbqr6_BxsmRlLB1hl8TcatBh9haTriUmgy3_27JG4'); 
+  background-size: contain;
+  display: block;
+  max-width: 500px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+  border: 5px solid black;
+  border-radius:5px;
+  
+}
+section h1 {
+  font-size: 20px;
+    color: white;
+  font-weight: bold;
+  margin-top: 40px;
+}
+section h2{
+  margin-left: 129px;
+  
+}
+header {
+  height:80px;
+  }
+div {
+  width: 506px;
+  display: block;  
+  border: 1px solid black;
+  background-color: #bac3d6;
+  border-radius:5px;
+  
+}
+img {
+  width: 150px;
+  height: 150px;
+  border-radius:100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transform:translatey(-50%);
+  border: 1px solid black;
+}
